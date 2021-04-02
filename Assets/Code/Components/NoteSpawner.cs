@@ -1,16 +1,22 @@
 ﻿using Assets.Code.Models;
+using Assets.Code.ScriptableObjects;
 using System.Collections;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Assets.Code.Components
 {
     public class NoteSpawner : MonoBehaviour
     {
+        [Header("Scriptable Object")]
+        [SerializeField]
+        private Music _music;
+
         [Header("Configuration")]
         [SerializeField]
         private float _velocity;
-
+       
 
         [Header("Prefab")]
         [SerializeField]
@@ -32,14 +38,16 @@ namespace Assets.Code.Components
         [SerializeField]
         private AudioSource _backgroundAudio;
 
+       
+
+        DataConfig _dataConfig;
 
         private Color _firstColor;
         private Color _secondColor;
         private Color _thirdColor;
         private Color _fourthColor;
 
-        DataConfig _dataConfig;
-
+        
         public void SetSetupConfig(DataConfig dataConfig)
         {
             _dataConfig = dataConfig;
@@ -49,7 +57,6 @@ namespace Assets.Code.Components
         {
             if (_riffAudio.isPlaying) return;
 
-            //_dataConfig.notes = _dataConfig.notes.OrderBy(e => e.time).ToList();
             StartCoroutine(ReleaseTheNotes());
             StartCoroutine(ReleaseTheSong());
         }
@@ -60,6 +67,20 @@ namespace Assets.Code.Components
             _secondColor = _second.gameObject.GetComponent<SpriteRenderer>().color;
             _thirdColor = _third.gameObject.GetComponent<SpriteRenderer>().color;
             _fourthColor = _fourth.gameObject.GetComponent<SpriteRenderer>().color;
+
+            if(_music != null)
+            {
+                _dataConfig = _music.DataConfig;
+                _riffAudio.clip = _music.RiffClip;
+                _backgroundAudio.clip = _music.BackgroundClip;
+            }
+
+        }
+
+
+        private void Start()
+        {
+            StartRiff();
         }
 
         IEnumerator ReleaseTheNotes()
@@ -122,4 +143,6 @@ namespace Assets.Code.Components
         }
 
     }
+
+
 }

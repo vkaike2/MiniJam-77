@@ -42,7 +42,7 @@ namespace Assets.Code.Components
             _rigidBody2D.velocity = new Vector2(0, -velocity);    
         }
 
-
-
     }
+
+
 }

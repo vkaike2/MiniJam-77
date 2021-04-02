@@ -10,7 +10,6 @@ namespace Assets.Code.Models
     public class DataConfig
     {
         public float cooldownToStart;
-        //public bool spawned;
         public List<NotesConfig> notes;
     }
 

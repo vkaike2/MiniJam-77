@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Assets.Code.Managers;
+using Assets.Code.Singletons;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -20,8 +22,6 @@ namespace Assets.Code.Components
         private float _activatonTime;
         [SerializeField]
         private float _cdwToDestroyNote;
-        [SerializeField]
-        private float _muteCdw;
 
         [Header("Event")]
         [SerializeField]
@@ -42,9 +42,11 @@ namespace Assets.Code.Components
         private Note _currentNote;
         private SpriteRenderer _spriteRenderer;
         private float _initialVolume;
+        private GameManager _gameManager;        
 
         private void Awake()
         {
+            _gameManager = FindObjectOfType<GameManager>();
             _initialVolume = _riffAudioSource.volume;
             _spriteRenderer = this.GetComponent<SpriteRenderer>();
             _color.a = INITIAL_ALPHA_COLOR;
@@ -55,19 +57,21 @@ namespace Assets.Code.Components
 
         private void Update()
         {
-            if (Input.GetKeyDown((UnityEngine.KeyCode)_inputs))
+            if (Input.GetKeyDown(_inputs))
             {
                 StartCoroutine(ActivateNote());
 
                 if (_currentNote is null)
                 {
                     _invokeOnError.Invoke();
+                    _gameManager.InvokeUptadeScore(false);
                     return;
                 }
 
-                // ponto
+
                 _currentNote.correct = true;
                 _riffAudioSource.volume = _initialVolume;
+                _gameManager.InvokeUptadeScore(true);
                 _currentNote.Kill();
             }
         }
@@ -89,9 +93,12 @@ namespace Assets.Code.Components
             if (note != null)
             {
                 if (_currentNote != null && !_currentNote.correct)
+                {
                     _riffAudioSource.volume = 0;
+                    _gameManager.InvokeUptadeScore(false);
+                }
+
                 note.Miss();
-                //StartCoroutine(MuteNote());
                 StartCoroutine(DestroyNoteAfterMis(_currentNote));
 
                 _currentNote = null;
@@ -118,5 +125,4 @@ namespace Assets.Code.Components
         }
     }
 
- 
 }
