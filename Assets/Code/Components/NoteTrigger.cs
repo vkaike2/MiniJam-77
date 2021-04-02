@@ -11,7 +11,7 @@ namespace Assets.Code.Components
     public class NoteTrigger : MonoBehaviour
     {
         [SerializeField]
-        private ArrowNotes _arrowInput;
+        private KeyCode _inputs;
         [SerializeField]
         private Color _color;
 
@@ -31,6 +31,10 @@ namespace Assets.Code.Components
         [SerializeField]
         private AudioSource _riffAudioSource;
 
+        [Header("Canvas")]
+        [SerializeField]
+        private TMP_Text _label_Input;
+
 
         private const float INITIAL_ALPHA_COLOR = 0.5f;
         private const float ACTIVATION_ALPHA_COLOR = 1f;
@@ -45,11 +49,13 @@ namespace Assets.Code.Components
             _spriteRenderer = this.GetComponent<SpriteRenderer>();
             _color.a = INITIAL_ALPHA_COLOR;
             _spriteRenderer.color = _color;
+
+            _label_Input.SetText(_inputs.ToString());
         }
 
         private void Update()
         {
-            if (Input.GetKeyDown((KeyCode)_arrowInput))
+            if (Input.GetKeyDown((UnityEngine.KeyCode)_inputs))
             {
                 StartCoroutine(ActivateNote());
 
@@ -112,124 +118,5 @@ namespace Assets.Code.Components
         }
     }
 
-    public enum ArrowNotes
-    {
-        UpArrow = 273,
-        //
-        // Resumo:
-        //     Down arrow key.
-        DownArrow = 274,
-        //
-        // Resumo:
-        //     Right arrow key.
-        RightArrow = 275,
-        //
-        // Resumo:
-        //     Left arrow key.
-        LeftArrow = 276,
-        //
-        // Resumo:
-        //     'a' key.
-        A = 97,
-        //
-        // Resumo:
-        //     'b' key.
-        B = 98,
-        //
-        // Resumo:
-        //     'c' key.
-        C = 99,
-        //
-        // Resumo:
-        //     'd' key.
-        D = 100,
-        //
-        // Resumo:
-        //     'e' key.
-        E = 101,
-        //
-        // Resumo:
-        //     'f' key.
-        F = 102,
-        //
-        // Resumo:
-        //     'g' key.
-        G = 103,
-        //
-        // Resumo:
-        //     'h' key.
-        H = 104,
-        //
-        // Resumo:
-        //     'i' key.
-        I = 105,
-        //
-        // Resumo:
-        //     'j' key.
-        J = 106,
-        //
-        // Resumo:
-        //     'k' key.
-        K = 107,
-        //
-        // Resumo:
-        //     'l' key.
-        L = 108,
-        //
-        // Resumo:
-        //     'm' key.
-        M = 109,
-        //
-        // Resumo:
-        //     'n' key.
-        N = 110,
-        //
-        // Resumo:
-        //     'o' key.
-        O = 111,
-        //
-        // Resumo:
-        //     'p' key.
-        P = 112,
-        //
-        // Resumo:
-        //     'q' key.
-        Q = 113,
-        //
-        // Resumo:
-        //     'r' key.
-        R = 114,
-        //
-        // Resumo:
-        //     's' key.
-        S = 115,
-        //
-        // Resumo:
-        //     't' key.
-        T = 116,
-        //
-        // Resumo:
-        //     'u' key.
-        U = 117,
-        //
-        // Resumo:
-        //     'v' key.
-        V = 118,
-        //
-        // Resumo:
-        //     'w' key.
-        W = 119,
-        //
-        // Resumo:
-        //     'x' key.
-        X = 120,
-        //
-        // Resumo:
-        //     'y' key.
-        Y = 121,
-        //
-        // Resumo:
-        //     'z' key.
-        Z = 122,
-    }
+ 
 }

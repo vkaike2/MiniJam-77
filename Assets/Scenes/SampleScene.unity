@@ -860,6 +860,36 @@ PrefabInstance:
       propertyPath: _riffAudioSource
       value: 
       objectReference: {fileID: 854148253}
+    - target: {fileID: 4865880616401745447, guid: 1a8294a884669ef448760c9157fab3f4,
+        type: 3}
+      propertyPath: _inputs
+      value: 107
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274762795229209463, guid: 1a8294a884669ef448760c9157fab3f4,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274762795229209463, guid: 1a8294a884669ef448760c9157fab3f4,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274762795229209463, guid: 1a8294a884669ef448760c9157fab3f4,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274762795229209463, guid: 1a8294a884669ef448760c9157fab3f4,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2647865570352890240, guid: 1a8294a884669ef448760c9157fab3f4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a8294a884669ef448760c9157fab3f4, type: 3}
 --- !u!1 &430234918
@@ -2502,6 +2532,36 @@ PrefabInstance:
       propertyPath: _riffAudioSource
       value: 
       objectReference: {fileID: 854148253}
+    - target: {fileID: 4865880616401745447, guid: 1a8294a884669ef448760c9157fab3f4,
+        type: 3}
+      propertyPath: _inputs
+      value: 106
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274762795229209463, guid: 1a8294a884669ef448760c9157fab3f4,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274762795229209463, guid: 1a8294a884669ef448760c9157fab3f4,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274762795229209463, guid: 1a8294a884669ef448760c9157fab3f4,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274762795229209463, guid: 1a8294a884669ef448760c9157fab3f4,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2647865570352890240, guid: 1a8294a884669ef448760c9157fab3f4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a8294a884669ef448760c9157fab3f4, type: 3}
 --- !u!1 &1110308957
@@ -3076,6 +3136,36 @@ PrefabInstance:
       propertyPath: _riffAudioSource
       value: 
       objectReference: {fileID: 854148253}
+    - target: {fileID: 4865880616401745447, guid: 1a8294a884669ef448760c9157fab3f4,
+        type: 3}
+      propertyPath: _inputs
+      value: 108
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274762795229209463, guid: 1a8294a884669ef448760c9157fab3f4,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274762795229209463, guid: 1a8294a884669ef448760c9157fab3f4,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274762795229209463, guid: 1a8294a884669ef448760c9157fab3f4,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274762795229209463, guid: 1a8294a884669ef448760c9157fab3f4,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2647865570352890240, guid: 1a8294a884669ef448760c9157fab3f4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a8294a884669ef448760c9157fab3f4, type: 3}
 --- !u!1 &1434556887
@@ -4999,5 +5089,35 @@ PrefabInstance:
       propertyPath: _riffAudioSource
       value: 
       objectReference: {fileID: 854148253}
+    - target: {fileID: 4865880616401745447, guid: 1a8294a884669ef448760c9157fab3f4,
+        type: 3}
+      propertyPath: _inputs
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274762795229209463, guid: 1a8294a884669ef448760c9157fab3f4,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274762795229209463, guid: 1a8294a884669ef448760c9157fab3f4,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274762795229209463, guid: 1a8294a884669ef448760c9157fab3f4,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274762795229209463, guid: 1a8294a884669ef448760c9157fab3f4,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2647865570352890240, guid: 1a8294a884669ef448760c9157fab3f4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a8294a884669ef448760c9157fab3f4, type: 3}

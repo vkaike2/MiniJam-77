@@ -59,7 +59,7 @@ namespace Assets.Code.Managers
 
         private void PlayMusic()
         {
-            if (Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetKeyDown(UnityEngine.KeyCode.Return))
             {
                 _noteSpawner.StartRiff();
             }
@@ -67,7 +67,7 @@ namespace Assets.Code.Managers
 
         private void ToggleDebugOptions()
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (Input.GetKeyDown(UnityEngine.KeyCode.Escape))
             {
                 _riffAudio.Stop();
                 _backgroundAudio.Stop();
