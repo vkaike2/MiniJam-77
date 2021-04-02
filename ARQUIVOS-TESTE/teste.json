@@ -1,0 +1,41 @@
+{
+    "cooldownToStart": 1,
+    "notes": [
+        {
+            "belts": [
+                0
+            ],
+            "time": 0
+        },
+        {
+            "belts": [
+                1
+            ],
+            "time": 0.2
+        },
+        {
+            "belts": [
+                2
+            ],
+            "time": 0.2
+        },
+        {
+            "belts": [
+                3
+            ],
+            "time": 0.2
+        },
+        {
+            "belts": [
+                3,2
+            ],
+            "time": 0.2
+        },
+        {
+            "belts": [
+                0,2
+            ],
+            "time": 0.2
+        }
+    ]
+}
