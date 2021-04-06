@@ -98,8 +98,8 @@ namespace Assets.Code.Components
                     _gameManager.InvokeUptadeScore(false);
                 }
 
-                note.Miss();
-                StartCoroutine(DestroyNoteAfterMis(_currentNote));
+                //note.Miss();
+                note.Kill();
 
                 _currentNote = null;
             }
@@ -115,13 +115,6 @@ namespace Assets.Code.Components
             color.a = INITIAL_ALPHA_COLOR;
             _spriteRenderer.color = color;
 
-        }
-
-        IEnumerator DestroyNoteAfterMis(Note note)
-        {
-            yield return new WaitForSecondsRealtime(_cdwToDestroyNote);
-            if (note != null)
-                Destroy(note.gameObject);
         }
     }
 

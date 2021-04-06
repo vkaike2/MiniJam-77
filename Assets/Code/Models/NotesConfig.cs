@@ -26,6 +26,7 @@ namespace Assets.Code.Models
         first ,
         second,
         down,
-        fourth
+        fourth,
+        wait
     }
 }

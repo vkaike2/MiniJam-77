@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
 namespace Assets.Code.Singletons
@@ -15,6 +10,9 @@ namespace Assets.Code.Singletons
 
         private static EventSingleton _events = null;
         public OnUpdateScore OnUpdateScore { get; set; }
+        public UnityEvent OnStartGame { get; set; }
+        public UnityEvent OnLose { get; set; }
+        public UnityEvent OnWin { get; set; }
 
         private void Awake()
         {
@@ -22,6 +20,9 @@ namespace Assets.Code.Singletons
                 _events = this;
 
             OnUpdateScore = new OnUpdateScore();
+            OnStartGame = new UnityEvent();
+            OnLose = new UnityEvent();
+            OnWin = new UnityEvent();
         }
     }
 

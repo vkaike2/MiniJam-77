@@ -1,0 +1,846 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b051c3760de080346be3278c357a2283, type: 3}
+  m_Name: Second_Music
+  m_EditorClassIdentifier: 
+  _backgroundClip: {fileID: 8300000, guid: 1904489931525cd498e0b8684cdb126c, type: 3}
+  _riffClip: {fileID: 8300000, guid: ac4deaa3a4e14b44cb3348a21662cefb, type: 3}
+  _jsonString: "{\r\n    \"cooldownToStart\": 1.24,\r\n    \"notes\": \r\n    [\r\n
+    \     \r\n{\"belts\": [0], \"time\": 0.23},\r\n{\"belts\": [1], \"time\": 0.23},\r\n{\"belts\":
+    [1], \"time\": 0.23},\r\n{\"belts\": [0], \"time\": 0.23},\r\n{\"belts\": [1],
+    \"time\": 0.23},\r\n{\"belts\": [1], \"time\": 0.23},\r\n{\"belts\": [2], \"time\":
+    0.23},\r\n{\"belts\": [0], \"time\": 0.23},\r\n{\"belts\": [0], \"time\": 0.23},\r\n{\"belts\":
+    [1], \"time\": 0.23},\r\n{\"belts\": [1], \"time\": 0.23},\r\n{\"belts\": [0],
+    \"time\": 0.23},\r\n{\"belts\": [1], \"time\": 0.23},\r\n{\"belts\": [1], \"time\":
+    0.23},\r\n{\"belts\": [3], \"time\": 0.23},\r\n{\"belts\": [0], \"time\": 0.23},\r\n\r\n\r\n{\"belts\":
+    [0], \"time\": 0.23},\r\n{\"belts\": [1], \"time\": 0.23},\r\n{\"belts\": [1],
+    \"time\": 0.23},\r\n{\"belts\": [0], \"time\": 0.23},\r\n{\"belts\": [1], \"time\":
+    0.23},\r\n{\"belts\": [1], \"time\": 0.23},\r\n{\"belts\": [2], \"time\": 0.23},\r\n{\"belts\":
+    [0], \"time\": 0.23},\r\n{\"belts\": [0], \"time\": 0.23},\r\n{\"belts\": [1],
+    \"time\": 0.23},\r\n{\"belts\": [1], \"time\": 0.23},\r\n{\"belts\": [0], \"time\":
+    0.23},\r\n{\"belts\": [1], \"time\": 0.23},\r\n{\"belts\": [1], \"time\": 0.23},\r\n{\"belts\":
+    [3], \"time\": 0.23},\r\n{\"belts\": [0], \"time\": 0.23},\r\n       \r\n{\"belts\":
+    [1], \"time\": 0.23},\r\n{\"belts\": [2], \"time\": 0.23},\r\n{\"belts\": [2],
+    \"time\": 0.23},\r\n{\"belts\": [1], \"time\": 0.23},\r\n{\"belts\": [2], \"time\":
+    0.23},\r\n{\"belts\": [2], \"time\": 0.23},\r\n{\"belts\": [3], \"time\": 0.23},\r\n{\"belts\":
+    [0], \"time\": 0.23},\r\n\r\n{\"belts\": [1], \"time\": 0.26},\r\n{\"belts\":
+    [2], \"time\": 0.24},\r\n{\"belts\": [2], \"time\": 0.24},\r\n{\"belts\": [1],
+    \"time\": 0.24},\r\n{\"belts\": [2], \"time\": 0.24},\r\n{\"belts\": [2], \"time\":
+    0.24},\r\n{\"belts\": [3], \"time\": 0.24},\r\n{\"belts\": [1], \"time\": 0.24},\r\n{\"belts\":
+    [1], \"time\": 0.24},\r\n{\"belts\": [2], \"time\": 0.24},\r\n{\"belts\": [2],
+    \"time\": 0.24},\r\n{\"belts\": [1], \"time\": 0.24},\r\n{\"belts\": [2], \"time\":
+    0.24},\r\n{\"belts\": [2], \"time\": 0.24},\r\n{\"belts\": [3], \"time\": 0.24},\r\n{\"belts\":
+    [0], \"time\": 0.24},\r\n{\"belts\": [1], \"time\": 0.24},\r\n{\"belts\": [2],
+    \"time\": 0.24},\r\n{\"belts\": [2], \"time\": 0.24},\r\n{\"belts\": [1], \"time\":
+    0.24},\r\n{\"belts\": [2], \"time\": 0.24},\r\n{\"belts\": [2], \"time\": 0.24},\r\n{\"belts\":
+    [3], \"time\": 0.24},\r\n{\"belts\": [1], \"time\": 0.24},\r\n{\"belts\": [3],
+    \"time\": 0.24},\r\n\r\n{\"belts\": [1], \"time\": 0.15},\r\n{\"belts\": [0],
+    \"time\": 0.125},\r\n{\"belts\": [1], \"time\": 0.125},\r\n{\"belts\": [3], \"time\":
+    0.125},\r\n{\"belts\": [1], \"time\": 0.125},\r\n{\"belts\": [0], \"time\": 0.125},\r\n{\"belts\":
+    [1], \"time\": 0.125},\r\n{\"belts\": [3], \"time\": 0.125},\r\n{\"belts\": [1],
+    \"time\": 0.125},\r\n{\"belts\": [0], \"time\": 0.125},\r\n{\"belts\": [1], \"time\":
+    0.125},\r\n{\"belts\": [2], \"time\": 0.125},\r\n{\"belts\": [1], \"time\": 0.125},\r\n{\"belts\":
+    [0], \"time\": 0.125},\r\n{\"belts\": [1], \"time\": 0.125},\r\n{\"belts\": [3],
+    \"time\": 0.125},\r\n{\"belts\": [1], \"time\": 0.125},\r\n{\"belts\": [0], \"time\":
+    0.125},\r\n{\"belts\": [1], \"time\": 0.125},\r\n{\"belts\": [3], \"time\": 0.125},\r\n{\"belts\":
+    [1], \"time\": 0.125},\r\n{\"belts\": [0], \"time\": 0.125},\r\n{\"belts\": [1],
+    \"time\": 0.125},\r\n{\"belts\": [3], \"time\": 0.125},\r\n{\"belts\": [1], \"time\":
+    0.125},\r\n{\"belts\": [0], \"time\": 0.125},\r\n{\"belts\": [1], \"time\": 0.125},\r\n{\"belts\":
+    [2], \"time\": 0.125},\r\n{\"belts\": [1], \"time\": 0.125},\r\n{\"belts\": [0],
+    \"time\": 0.125},\r\n{\"belts\": [1], \"time\": 0.125},\r\n{\"belts\": [3], \"time\":
+    0.125},\r\n{\"belts\": [1], \"time\": 0.125},\r\n{\"belts\": [0], \"time\": 0.125},\r\n{\"belts\":
+    [1], \"time\": 0.125},\r\n{\"belts\": [3], \"time\": 0.125},\r\n{\"belts\": [1],
+    \"time\": 0.125},\r\n{\"belts\": [0], \"time\": 0.125},\r\n{\"belts\": [1], \"time\":
+    0.125},\r\n{\"belts\": [3], \"time\": 0.125},\r\n{\"belts\": [1], \"time\": 0.125},\r\n{\"belts\":
+    [0], \"time\": 0.125},\r\n{\"belts\": [1], \"time\": 0.125},\r\n{\"belts\": [2],
+    \"time\": 0.125},\r\n{\"belts\": [1], \"time\": 0.125},\r\n{\"belts\": [0], \"time\":
+    0.125},\r\n{\"belts\": [1], \"time\": 0.125},\r\n{\"belts\": [3], \"time\": 0.125},\r\n{\"belts\":
+    [1], \"time\": 0.125},\r\n{\"belts\": [0], \"time\": 0.125},\r\n{\"belts\": [1],
+    \"time\": 0.125},\r\n{\"belts\": [3], \"time\": 0.125},\r\n{\"belts\": [1], \"time\":
+    0.125},\r\n{\"belts\": [0], \"time\": 0.125},\r\n    \r\n{\"belts\": [1], \"time\":
+    0.125},\r\n{\"belts\": [0], \"time\": 0.125},\r\n{\"belts\": [1], \"time\": 0.125},\r\n{\"belts\":
+    [3], \"time\": 0.125},\r\n\r\n\r\n{\"belts\": [3], \"time\": 0.3},\r\n{\"belts\":
+    [2], \"time\": 0.125},\r\n{\"belts\": [1], \"time\": 0.125},\r\n{\"belts\": [2],
+    \"time\": 0.125},\r\n{\"belts\": [3], \"time\": 0.125},\r\n{\"belts\": [2], \"time\":
+    0.125},\r\n{\"belts\": [1], \"time\": 0.125},\r\n{\"belts\": [2], \"time\": 0.125},\r\n{\"belts\":
+    [3], \"time\": 0.125},\r\n{\"belts\": [2], \"time\": 0.125},\r\n{\"belts\": [1],
+    \"time\": 0.125},\r\n{\"belts\": [2], \"time\": 0.125},\r\n{\"belts\": [3], \"time\":
+    0.125},\r\n{\"belts\": [2], \"time\": 0.125},\r\n{\"belts\": [1], \"time\": 0.125},\r\n{\"belts\":
+    [2], \"time\": 0.125},\r\n{\"belts\": [3], \"time\": 0.125},\r\n{\"belts\": [2],
+    \"time\": 0.125},\r\n{\"belts\": [1], \"time\": 0.125},\r\n{\"belts\": [2], \"time\":
+    0.125},\r\n{\"belts\": [3], \"time\": 0.125},\r\n{\"belts\": [2], \"time\": 0.125},\r\n{\"belts\":
+    [1], \"time\": 0.125},\r\n{\"belts\": [2], \"time\": 0.125},\r\n{\"belts\": [3],
+    \"time\": 0.125},\r\n{\"belts\": [2], \"time\": 0.125},\r\n{\"belts\": [1], \"time\":
+    0.125},\r\n{\"belts\": [2], \"time\": 0.125},\r\n{\"belts\": [3], \"time\": 0.125},\r\n{\"belts\":
+    [2], \"time\": 0.125},\r\n{\"belts\": [1], \"time\": 0.125},\r\n{\"belts\": [2],
+    \"time\": 0.125},\r\n{\"belts\": [3], \"time\": 0.125},\r\n{\"belts\": [2], \"time\":
+    0.125},\r\n{\"belts\": [1], \"time\": 0.125},\r\n{\"belts\": [2], \"time\": 0.125},\r\n{\"belts\":
+    [3], \"time\": 0.125},\r\n{\"belts\": [2], \"time\": 0.125},\r\n{\"belts\": [1],
+    \"time\": 0.125},\r\n{\"belts\": [2], \"time\": 0.125},\r\n{\"belts\": [3], \"time\":
+    0.125},\r\n{\"belts\": [2], \"time\": 0.125},\r\n{\"belts\": [1], \"time\": 0.125},\r\n{\"belts\":
+    [2], \"time\": 0.125},\r\n{\"belts\": [3], \"time\": 0.125},\r\n{\"belts\": [2],
+    \"time\": 0.125},\r\n{\"belts\": [1], \"time\": 0.125},\r\n{\"belts\": [2], \"time\":
+    0.125},\r\n{\"belts\": [3], \"time\": 0.125},\r\n{\"belts\": [2], \"time\": 0.125},\r\n{\"belts\":
+    [1], \"time\": 0.125},\r\n{\"belts\": [2], \"time\": 0.125},\r\n{\"belts\": [3],
+    \"time\": 0.125},\r\n{\"belts\": [2], \"time\": 0.125},\r\n{\"belts\": [1], \"time\":
+    0.125},\r\n{\"belts\": [2], \"time\": 0.125},\r\n{\"belts\": [3], \"time\": 0.125},\r\n{\"belts\":
+    [2], \"time\": 0.125},\r\n{\"belts\": [1], \"time\": 0.125},\r\n{\"belts\": [2],
+    \"time\": 0.125},\r\n{\"belts\": [3], \"time\": 0.125},    \r\n\r\n{\"belts\":
+    [1], \"time\": 8.2},\r\n{\"belts\": [0], \"time\": 1.5},\r\n{\"belts\": [1], \"time\":
+    0.5},\r\n{\"belts\": [2], \"time\": 1.5},\r\n{\"belts\": [1], \"time\": 0.5},\r\n{\"belts\":
+    [0], \"time\": 1.5},\r\n{\"belts\": [1], \"time\": 0.5},\r\n{\"belts\": [2], \"time\":
+    0.5},\r\n{\"belts\": [1], \"time\": 0.5},\r\n{\"belts\": [2], \"time\": 0.5},\r\n{\"belts\":
+    [2], \"time\": 0.5},\r\n{\"belts\": [1], \"time\": 1.5},\r\n{\"belts\": [2], \"time\":
+    0.5},\r\n{\"belts\": [3], \"time\": 1.5},\r\n{\"belts\": [2], \"time\": 0.5},\r\n{\"belts\":
+    [1], \"time\": 1.5},\r\n{\"belts\": [2], \"time\": 0.5},\r\n{\"belts\": [3], \"time\":
+    0.5},\r\n{\"belts\": [2], \"time\": 0.5},\r\n{\"belts\": [1], \"time\": 0.5},\r\n{\"belts\":
+    [1, 2], \"time\": 0.5},\r\n{\"belts\": [0, 1], \"time\": 1.5},\r\n{\"belts\":
+    [1, 2], \"time\": 0.5},\r\n{\"belts\": [2, 3], \"time\": 1.5},\r\n{\"belts\":
+    [1, 2], \"time\": 0.5},\r\n{\"belts\": [0, 1], \"time\": 1.5},\r\n{\"belts\":
+    [1, 2], \"time\": 0.5},\r\n{\"belts\": [0, 2], \"time\": 1.5},\r\n{\"belts\":
+    [1, 3], \"time\": 0.5},\r\n{\"belts\": [0, 2], \"time\": 1.5},\r\n{\"belts\":
+    [1, 3], \"time\": 0.5},\r\n{\"belts\": [2, 3], \"time\": 1.5},\r\n{\"belts\":
+    [1, 3], \"time\": 0.5},\r\n{\"belts\": [0, 2], \"time\": 1.5},\r\n{\"belts\":
+    [1, 3], \"time\": 0.5},\r\n{\"belts\": [2, 3], \"time\": 0.5},\r\n{\"belts\":
+    [1, 3], \"time\": 0.5},\r\n{\"belts\": [0, 2], \"time\": 0.5},\r\n\r\n\r\n{\"belts\":
+    [3], \"time\": 0.3},\r\n\r\n{\"belts\": [1], \"time\": 0.12},\r\n{\"belts\": [0],
+    \"time\": 0.12},\r\n{\"belts\": [1], \"time\": 0.12},\r\n{\"belts\": [3], \"time\":
+    0.12},\r\n{\"belts\": [1], \"time\": 0.12},\r\n{\"belts\": [0], \"time\": 0.12},\r\n{\"belts\":
+    [1], \"time\": 0.12},\r\n{\"belts\": [3], \"time\": 0.12},\r\n{\"belts\": [1],
+    \"time\": 0.12},\r\n{\"belts\": [0], \"time\": 0.12},\r\n{\"belts\": [1], \"time\":
+    0.12},\r\n{\"belts\": [2], \"time\": 0.12},\r\n{\"belts\": [1], \"time\": 0.12},\r\n{\"belts\":
+    [0], \"time\": 0.12},\r\n{\"belts\": [1], \"time\": 0.12},\r\n{\"belts\": [3],
+    \"time\": 0.12},\r\n{\"belts\": [1], \"time\": 0.12},\r\n{\"belts\": [0], \"time\":
+    0.12},\r\n{\"belts\": [1], \"time\": 0.12},\r\n{\"belts\": [3], \"time\": 0.12},\r\n{\"belts\":
+    [1], \"time\": 0.12},\r\n{\"belts\": [0], \"time\": 0.12},\r\n{\"belts\": [1],
+    \"time\": 0.12},\r\n{\"belts\": [3], \"time\": 0.12},\r\n{\"belts\": [1], \"time\":
+    0.12},\r\n{\"belts\": [0], \"time\": 0.12},\r\n{\"belts\": [1], \"time\": 0.12},\r\n{\"belts\":
+    [2], \"time\": 0.12},\r\n{\"belts\": [1], \"time\": 0.12},\r\n{\"belts\": [0],
+    \"time\": 0.12},\r\n{\"belts\": [1], \"time\": 0.12},\r\n{\"belts\": [3], \"time\":
+    0.12},\r\n{\"belts\": [1], \"time\": 0.12},\r\n{\"belts\": [0], \"time\": 0.12},\r\n{\"belts\":
+    [1], \"time\": 0.12},\r\n{\"belts\": [3], \"time\": 0.12},\r\n{\"belts\": [1],
+    \"time\": 0.12},\r\n{\"belts\": [0], \"time\": 0.12},\r\n{\"belts\": [1], \"time\":
+    0.12},\r\n{\"belts\": [3], \"time\": 0.12},\r\n{\"belts\": [1], \"time\": 0.12},\r\n{\"belts\":
+    [0], \"time\": 0.12},\r\n{\"belts\": [1], \"time\": 0.12},\r\n{\"belts\": [2],
+    \"time\": 0.12},\r\n{\"belts\": [1], \"time\": 0.12},\r\n{\"belts\": [0], \"time\":
+    0.12},\r\n{\"belts\": [1], \"time\": 0.12},\r\n{\"belts\": [3], \"time\": 0.12},\r\n{\"belts\":
+    [1], \"time\": 0.12},\r\n{\"belts\": [0], \"time\": 0.12},\r\n{\"belts\": [1],
+    \"time\": 0.12},\r\n{\"belts\": [3], \"time\": 0.12},\r\n{\"belts\": [1], \"time\":
+    0.12},\r\n{\"belts\": [0], \"time\": 0.12},\r\n\r\n{\"belts\": [3], \"time\":
+    0.32},\r\n{\"belts\": [2], \"time\": 0.125},\r\n{\"belts\": [1], \"time\": 0.125},\r\n{\"belts\":
+    [2], \"time\": 0.125},\r\n{\"belts\": [3], \"time\": 0.125},\r\n{\"belts\": [2],
+    \"time\": 0.125},\r\n{\"belts\": [1], \"time\": 0.125},\r\n{\"belts\": [2], \"time\":
+    0.125},\r\n{\"belts\": [3], \"time\": 0.125},\r\n{\"belts\": [2], \"time\": 0.125},\r\n{\"belts\":
+    [1], \"time\": 0.125},\r\n{\"belts\": [2], \"time\": 0.125},\r\n{\"belts\": [3],
+    \"time\": 0.125},\r\n{\"belts\": [2], \"time\": 0.125},\r\n{\"belts\": [1], \"time\":
+    0.125},\r\n{\"belts\": [2], \"time\": 0.125},\r\n{\"belts\": [3], \"time\": 0.125},\r\n{\"belts\":
+    [2], \"time\": 0.125},\r\n{\"belts\": [1], \"time\": 0.125},\r\n{\"belts\": [2],
+    \"time\": 0.125},\r\n{\"belts\": [3], \"time\": 0.125},\r\n{\"belts\": [2], \"time\":
+    0.125},\r\n{\"belts\": [1], \"time\": 0.125},\r\n{\"belts\": [2], \"time\": 0.125},\r\n{\"belts\":
+    [3], \"time\": 0.125},\r\n{\"belts\": [2], \"time\": 0.125},\r\n{\"belts\": [1],
+    \"time\": 0.125},\r\n{\"belts\": [2], \"time\": 0.125},\r\n{\"belts\": [3], \"time\":
+    0.125},\r\n{\"belts\": [2], \"time\": 0.125},\r\n{\"belts\": [1], \"time\": 0.125},\r\n{\"belts\":
+    [2], \"time\": 0.125},\r\n{\"belts\": [3], \"time\": 0.125},\r\n{\"belts\": [2],
+    \"time\": 0.125},\r\n{\"belts\": [1], \"time\": 0.125},\r\n{\"belts\": [2], \"time\":
+    0.125},\r\n{\"belts\": [3], \"time\": 0.125},\r\n{\"belts\": [2], \"time\": 0.125},\r\n{\"belts\":
+    [1], \"time\": 0.125},\r\n{\"belts\": [2], \"time\": 0.125},\r\n{\"belts\": [3],
+    \"time\": 0.125},\r\n{\"belts\": [2], \"time\": 0.125},\r\n{\"belts\": [1], \"time\":
+    0.125},\r\n{\"belts\": [2], \"time\": 0.125},\r\n{\"belts\": [3], \"time\": 0.125},\r\n{\"belts\":
+    [2], \"time\": 0.125},\r\n{\"belts\": [1], \"time\": 0.125},\r\n{\"belts\": [2],
+    \"time\": 0.125},\r\n{\"belts\": [3], \"time\": 0.125},\r\n{\"belts\": [2], \"time\":
+    0.125},\r\n{\"belts\": [1], \"time\": 0.125},\r\n{\"belts\": [2], \"time\": 0.125},\r\n{\"belts\":
+    [3], \"time\": 0.125},\r\n{\"belts\": [2], \"time\": 0.125},\r\n{\"belts\": [1],
+    \"time\": 0.125},\r\n{\"belts\": [2], \"time\": 0.125},\r\n{\"belts\": [3], \"time\":
+    0.125},\r\n{\"belts\": [2], \"time\": 0.125},\r\n{\"belts\": [1], \"time\": 0.125},\r\n{\"belts\":
+    [2], \"time\": 0.125},\r\n{\"belts\": [3], \"time\": 0.125},    \r\n\r\n\r\n\r\n\r\n{\"belts\":
+    [0], \"time\": 4.2}   \r\n ]\r\n}"
+  _dataConfig:
+    cooldownToStart: 1.24
+    notes:
+    - belts: 00000000
+      time: 0.23
+    - belts: 01000000
+      time: 0.23
+    - belts: 01000000
+      time: 0.23
+    - belts: 00000000
+      time: 0.23
+    - belts: 01000000
+      time: 0.23
+    - belts: 01000000
+      time: 0.23
+    - belts: 02000000
+      time: 0.23
+    - belts: 00000000
+      time: 0.23
+    - belts: 00000000
+      time: 0.23
+    - belts: 01000000
+      time: 0.23
+    - belts: 01000000
+      time: 0.23
+    - belts: 00000000
+      time: 0.23
+    - belts: 01000000
+      time: 0.23
+    - belts: 01000000
+      time: 0.23
+    - belts: 03000000
+      time: 0.23
+    - belts: 00000000
+      time: 0.23
+    - belts: 00000000
+      time: 0.23
+    - belts: 01000000
+      time: 0.23
+    - belts: 01000000
+      time: 0.23
+    - belts: 00000000
+      time: 0.23
+    - belts: 01000000
+      time: 0.23
+    - belts: 01000000
+      time: 0.23
+    - belts: 02000000
+      time: 0.23
+    - belts: 00000000
+      time: 0.23
+    - belts: 00000000
+      time: 0.23
+    - belts: 01000000
+      time: 0.23
+    - belts: 01000000
+      time: 0.23
+    - belts: 00000000
+      time: 0.23
+    - belts: 01000000
+      time: 0.23
+    - belts: 01000000
+      time: 0.23
+    - belts: 03000000
+      time: 0.23
+    - belts: 00000000
+      time: 0.23
+    - belts: 01000000
+      time: 0.23
+    - belts: 02000000
+      time: 0.23
+    - belts: 02000000
+      time: 0.23
+    - belts: 01000000
+      time: 0.23
+    - belts: 02000000
+      time: 0.23
+    - belts: 02000000
+      time: 0.23
+    - belts: 03000000
+      time: 0.23
+    - belts: 00000000
+      time: 0.23
+    - belts: 01000000
+      time: 0.26
+    - belts: 02000000
+      time: 0.24
+    - belts: 02000000
+      time: 0.24
+    - belts: 01000000
+      time: 0.24
+    - belts: 02000000
+      time: 0.24
+    - belts: 02000000
+      time: 0.24
+    - belts: 03000000
+      time: 0.24
+    - belts: 01000000
+      time: 0.24
+    - belts: 01000000
+      time: 0.24
+    - belts: 02000000
+      time: 0.24
+    - belts: 02000000
+      time: 0.24
+    - belts: 01000000
+      time: 0.24
+    - belts: 02000000
+      time: 0.24
+    - belts: 02000000
+      time: 0.24
+    - belts: 03000000
+      time: 0.24
+    - belts: 00000000
+      time: 0.24
+    - belts: 01000000
+      time: 0.24
+    - belts: 02000000
+      time: 0.24
+    - belts: 02000000
+      time: 0.24
+    - belts: 01000000
+      time: 0.24
+    - belts: 02000000
+      time: 0.24
+    - belts: 02000000
+      time: 0.24
+    - belts: 03000000
+      time: 0.24
+    - belts: 01000000
+      time: 0.24
+    - belts: 03000000
+      time: 0.24
+    - belts: 01000000
+      time: 0.15
+    - belts: 00000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 00000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 00000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 00000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 00000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 00000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 00000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 00000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 00000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 00000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 00000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 00000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 00000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 00000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 00000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.3
+    - belts: 02000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 01000000
+      time: 8.2
+    - belts: 00000000
+      time: 1.5
+    - belts: 01000000
+      time: 0.5
+    - belts: 02000000
+      time: 1.5
+    - belts: 01000000
+      time: 0.5
+    - belts: 00000000
+      time: 1.5
+    - belts: 01000000
+      time: 0.5
+    - belts: 02000000
+      time: 0.5
+    - belts: 01000000
+      time: 0.5
+    - belts: 02000000
+      time: 0.5
+    - belts: 02000000
+      time: 0.5
+    - belts: 01000000
+      time: 1.5
+    - belts: 02000000
+      time: 0.5
+    - belts: 03000000
+      time: 1.5
+    - belts: 02000000
+      time: 0.5
+    - belts: 01000000
+      time: 1.5
+    - belts: 02000000
+      time: 0.5
+    - belts: 03000000
+      time: 0.5
+    - belts: 02000000
+      time: 0.5
+    - belts: 01000000
+      time: 0.5
+    - belts: 0100000002000000
+      time: 0.5
+    - belts: 0000000001000000
+      time: 1.5
+    - belts: 0100000002000000
+      time: 0.5
+    - belts: 0200000003000000
+      time: 1.5
+    - belts: 0100000002000000
+      time: 0.5
+    - belts: 0000000001000000
+      time: 1.5
+    - belts: 0100000002000000
+      time: 0.5
+    - belts: 0000000002000000
+      time: 1.5
+    - belts: 0100000003000000
+      time: 0.5
+    - belts: 0000000002000000
+      time: 1.5
+    - belts: 0100000003000000
+      time: 0.5
+    - belts: 0200000003000000
+      time: 1.5
+    - belts: 0100000003000000
+      time: 0.5
+    - belts: 0000000002000000
+      time: 1.5
+    - belts: 0100000003000000
+      time: 0.5
+    - belts: 0200000003000000
+      time: 0.5
+    - belts: 0100000003000000
+      time: 0.5
+    - belts: 0000000002000000
+      time: 0.5
+    - belts: 03000000
+      time: 0.3
+    - belts: 01000000
+      time: 0.12
+    - belts: 00000000
+      time: 0.12
+    - belts: 01000000
+      time: 0.12
+    - belts: 03000000
+      time: 0.12
+    - belts: 01000000
+      time: 0.12
+    - belts: 00000000
+      time: 0.12
+    - belts: 01000000
+      time: 0.12
+    - belts: 03000000
+      time: 0.12
+    - belts: 01000000
+      time: 0.12
+    - belts: 00000000
+      time: 0.12
+    - belts: 01000000
+      time: 0.12
+    - belts: 02000000
+      time: 0.12
+    - belts: 01000000
+      time: 0.12
+    - belts: 00000000
+      time: 0.12
+    - belts: 01000000
+      time: 0.12
+    - belts: 03000000
+      time: 0.12
+    - belts: 01000000
+      time: 0.12
+    - belts: 00000000
+      time: 0.12
+    - belts: 01000000
+      time: 0.12
+    - belts: 03000000
+      time: 0.12
+    - belts: 01000000
+      time: 0.12
+    - belts: 00000000
+      time: 0.12
+    - belts: 01000000
+      time: 0.12
+    - belts: 03000000
+      time: 0.12
+    - belts: 01000000
+      time: 0.12
+    - belts: 00000000
+      time: 0.12
+    - belts: 01000000
+      time: 0.12
+    - belts: 02000000
+      time: 0.12
+    - belts: 01000000
+      time: 0.12
+    - belts: 00000000
+      time: 0.12
+    - belts: 01000000
+      time: 0.12
+    - belts: 03000000
+      time: 0.12
+    - belts: 01000000
+      time: 0.12
+    - belts: 00000000
+      time: 0.12
+    - belts: 01000000
+      time: 0.12
+    - belts: 03000000
+      time: 0.12
+    - belts: 01000000
+      time: 0.12
+    - belts: 00000000
+      time: 0.12
+    - belts: 01000000
+      time: 0.12
+    - belts: 03000000
+      time: 0.12
+    - belts: 01000000
+      time: 0.12
+    - belts: 00000000
+      time: 0.12
+    - belts: 01000000
+      time: 0.12
+    - belts: 02000000
+      time: 0.12
+    - belts: 01000000
+      time: 0.12
+    - belts: 00000000
+      time: 0.12
+    - belts: 01000000
+      time: 0.12
+    - belts: 03000000
+      time: 0.12
+    - belts: 01000000
+      time: 0.12
+    - belts: 00000000
+      time: 0.12
+    - belts: 01000000
+      time: 0.12
+    - belts: 03000000
+      time: 0.12
+    - belts: 01000000
+      time: 0.12
+    - belts: 00000000
+      time: 0.12
+    - belts: 03000000
+      time: 0.32
+    - belts: 02000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 01000000
+      time: 0.125
+    - belts: 02000000
+      time: 0.125
+    - belts: 03000000
+      time: 0.125
+    - belts: 00000000
+      time: 4.2

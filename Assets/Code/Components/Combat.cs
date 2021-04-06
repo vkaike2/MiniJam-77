@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.Code.Singletons;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +8,7 @@ using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 namespace Assets.Code.Components
 {
@@ -31,6 +33,20 @@ namespace Assets.Code.Components
         private TMP_Text _labelDamage;
         [SerializeField]
         private Animator _animatorDamage;
+        [SerializeField]
+        private UILifeBar _lifeBar;
+        [Space]
+        [SerializeField]
+        private Animator _combatAnimator;
+        [SerializeField]
+        private float _waitBeforeAtk;
+
+        [Header("AUDIO")]
+        [SerializeField]
+        private AudioSource _audioSourceAtack;
+        [SerializeField]
+        private List<AudioClip> _audioAtackClips;
+
 
 
         public bool IsAlive { get; private set; }
@@ -38,27 +54,38 @@ namespace Assets.Code.Components
         private float _currentHP;
         private float _currentDamage;
         private Combat _target;
-        private UILifeBar _lifeBar;
+        private int _hashAnimatorAtk = Animator.StringToHash("Atk");
+        private int _hashAnimatorDie = Animator.StringToHash("Die");
 
         private int _hashAnimatorDamage = Animator.StringToHash("ShowDmg");
 
         public void ReceiveDamage(float damage)
         {
             if (!this.IsAlive) return;
+            ShowDamageOnUi(damage);
 
             _currentHP -= damage;
-            ShowDamageOnUi(damage);
             _lifeBar.RemoveLife(_currentHP / _maxHP);
 
             if (_currentHP <= 0)
             {
                 this.IsAlive = false;
-                Debug.Log(_type.ToString() + " MORREU!");
 
-                if (_type == CombatType.HERO)
+                if (_combatAnimator != null)
+                    _combatAnimator.SetTrigger(_hashAnimatorDie);
+
+                switch (_type)
                 {
-                    SceneManager.LoadScene(0);
-                    //Application.LoadLevel(Application.loadedLevel);
+                    case CombatType.HERO:
+                        //Hero died
+                        EventSingleton.Events.OnLose.Invoke();
+                        break;
+                    case CombatType.ENEMY:
+                        // Enemy died
+                        EventSingleton.Events.OnWin.Invoke();
+                        break;
+                    default:
+                        break;
                 }
             }
         }
@@ -66,11 +93,12 @@ namespace Assets.Code.Components
         public void UpdateBaseDamage(float percentage)
         {
             percentage += 1;
-            _currentDamage = _baseDamage* percentage;
+            _currentDamage = _baseDamage * percentage;
         }
 
         private void ShowDamageOnUi(float damage)
         {
+
             _labelDamage.SetText(damage.ToString("0.00"));
             _animatorDamage.ResetTrigger(_hashAnimatorDamage);
             _animatorDamage.SetTrigger(_hashAnimatorDamage);
@@ -81,40 +109,73 @@ namespace Assets.Code.Components
             IsAlive = true;
             _currentHP = _maxHP;
             _currentDamage = _baseDamage;
-            SearchForTarget();
-
-            _lifeBar = this.GetComponentInChildren<UILifeBar>();
-
         }
 
 
         private void Start()
         {
-            StartCoroutine(Fight());
+            EventSingleton.Events.OnStartGame.AddListener(SearchForTarget);
+            EventSingleton.Events.OnLose.AddListener(OnLose);
+            EventSingleton.Events.OnWin.AddListener(OnWin);
         }
+
+        private void OnWin() => StopAllCoroutines();
+
+        private void OnLose()
+        {
+            StopAllCoroutines();
+        }
+
 
         IEnumerator Fight()
         {
             while (_target != null && _target.IsAlive)
             {
                 yield return new WaitForSecondsRealtime(_atkSpeed);
-                _target.ReceiveDamage(_currentDamage);
+                if (_combatAnimator != null)
+                    _combatAnimator.SetTrigger(_hashAnimatorAtk);
+                StartCoroutine(WaitSomeTimeThenAtk());
             }
+        }
+
+        private void MakeSomeNoise()
+        {
+            _audioSourceAtack.clip = _audioAtackClips[Random.Range(0, _audioAtackClips.Count)];
+            _audioSourceAtack.Play();
+        }
+
+        IEnumerator WaitSomeTimeThenAtk()
+        {
+            yield return new WaitForSecondsRealtime(_waitBeforeAtk);
+      
+            MakeSomeNoise();
+            _target.ReceiveDamage(_currentDamage);
+        }
+
+        IEnumerator LookingForTarget()
+        {
+            while (_target == null)
+            {
+                yield return new WaitForSecondsRealtime(1);
+                switch (_type)
+                {
+                    case CombatType.HERO:
+                        _target = GameObject.FindGameObjectWithTag(CombatType.ENEMY.ToString()).GetComponent<Combat>();
+                        break;
+                    case CombatType.ENEMY:
+                        _target = GameObject.FindGameObjectWithTag(CombatType.HERO.ToString()).GetComponent<Combat>();
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            StartCoroutine(Fight());
         }
 
         private void SearchForTarget()
         {
-            switch (_type)
-            {
-                case CombatType.HERO:
-                    _target = GameObject.FindGameObjectWithTag(CombatType.ENEMY.ToString()).GetComponent<Combat>();
-                    break;
-                case CombatType.ENEMY:
-                    _target = GameObject.FindGameObjectWithTag(CombatType.HERO.ToString()).GetComponent<Combat>();
-                    break;
-                default:
-                    break;
-            }
+            StartCoroutine(LookingForTarget());
         }
     }
 

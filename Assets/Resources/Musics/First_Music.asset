@@ -1,0 +1,175 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b051c3760de080346be3278c357a2283, type: 3}
+  m_Name: First_Music
+  m_EditorClassIdentifier: 
+  _backgroundClip: {fileID: 8300000, guid: 6f9c95aee72057e4686e1f393200012c, type: 3}
+  _riffClip: {fileID: 8300000, guid: c42abdf71b3d38b43b7cf6108d53eaa2, type: 3}
+  _jsonString: "{\r\n    \"cooldownToStart\": 1.5,\r\n    \"notes\": [\r\n        {\r\n
+    \           \"belts\": [\r\n                0\r\n            ],\r\n            \"time\":
+    0.29\r\n        },\r\n        {\r\n            \"belts\": [\r\n                1\r\n
+    \           ],\r\n            \"time\": 0.29\r\n        },\r\n        {\r\n            \"belts\":
+    [\r\n                2\r\n            ],\r\n            \"time\": 0.29\r\n        },\r\n
+    \       {\r\n            \"belts\": [\r\n                3\r\n            ],\r\n
+    \           \"time\": 0.29\r\n        },\r\n        {\r\n            \"belts\":
+    [\r\n                2\r\n            ],\r\n            \"time\": 0.29\r\n        },\r\n
+    \       {\r\n            \"belts\": [\r\n                3\r\n            ],\r\n
+    \           \"time\": 0.29\r\n        },\r\n        {\r\n            \"belts\":
+    [\r\n                2\r\n            ],\r\n            \"time\": 0.29\r\n        },\r\n
+    \       {\r\n            \"belts\": [\r\n                3\r\n            ],\r\n
+    \           \"time\": 0.2\r\n        },\r\n        {\r\n            \"belts\":
+    [\r\n                2\r\n            ],\r\n            \"time\": 0.29\r\n        },\r\n
+    \       {\r\n            \"belts\": [\r\n                0\r\n            ],\r\n
+    \           \"time\": 0.48\r\n        },\r\n        {\r\n            \"belts\":
+    [\r\n                0\r\n            ],\r\n            \"time\": 0.45\r\n        },\r\n\r\n\r\n\r\n
+    \       {\r\n            \"belts\": [\r\n                3\r\n            ],\r\n
+    \           \"time\": 0.5\r\n        },\r\n        {\r\n            \"belts\":
+    [\r\n                2\r\n            ],\r\n            \"time\": 0.29\r\n        },\r\n
+    \       {\r\n            \"belts\": [\r\n                1\r\n            ],\r\n
+    \           \"time\": 0.29\r\n        },\r\n        {\r\n            \"belts\":
+    [\r\n                0\r\n            ],\r\n            \"time\": 0.2\r\n        },\r\n
+    \       {\r\n            \"belts\": [\r\n                0\r\n            ],\r\n
+    \           \"time\": 0.29\r\n        },\r\n        {\r\n            \"belts\":
+    [\r\n                1\r\n            ],\r\n            \"time\": 0.29\r\n        },\r\n
+    \       {\r\n            \"belts\": [\r\n                2\r\n            ],\r\n
+    \           \"time\": 0.29\r\n        },\r\n        {\r\n            \"belts\":
+    [\r\n                3\r\n            ],\r\n            \"time\": 0.29\r\n        },\r\n
+    \       {\r\n            \"belts\": [\r\n                1,\r\n                2,\r\n
+    \               3\r\n            ],\r\n            \"time\": 0.25\r\n        },\r\n
+    \       {\r\n            \"belts\": [\r\n                2\r\n            ],\r\n
+    \           \"time\": 0.5\r\n        },\r\n        {\r\n            \"belts\":
+    [\r\n                0\r\n            ],\r\n            \"time\": 0.23\r\n        },\r\n\r\n
+    \       {\r\n            \"belts\": [\r\n                0\r\n            ],\r\n
+    \           \"time\": 1\r\n        },\r\n        {\r\n            \"belts\": [\r\n
+    \               1\r\n            ],\r\n            \"time\": 0.29\r\n        },\r\n
+    \       {\r\n            \"belts\": [\r\n                2\r\n            ],\r\n
+    \           \"time\": 0.29\r\n        },\r\n        {\r\n            \"belts\":
+    [\r\n                3\r\n            ],\r\n            \"time\": 0.29\r\n        },\r\n
+    \       {\r\n            \"belts\": [\r\n                2\r\n            ],\r\n
+    \           \"time\": 0.29\r\n        },\r\n        {\r\n            \"belts\":
+    [\r\n                3\r\n            ],\r\n            \"time\": 0.29\r\n        },\r\n
+    \       {\r\n            \"belts\": [\r\n                2\r\n            ],\r\n
+    \           \"time\": 0.29\r\n        },\r\n        {\r\n            \"belts\":
+    [\r\n                3\r\n            ],\r\n            \"time\": 0.2\r\n        },\r\n
+    \       {\r\n            \"belts\": [\r\n                2\r\n            ],\r\n
+    \           \"time\": 0.29\r\n        },\r\n        {\r\n            \"belts\":
+    [\r\n                0\r\n            ],\r\n            \"time\": 0.6\r\n        },\r\n
+    \       {\r\n            \"belts\": [\r\n                0\r\n            ],\r\n
+    \           \"time\": 0.6\r\n        }\r\n\r\n        ,\r\n        {\r\n            \"belts\":
+    [\r\n                3\r\n            ],\r\n            \"time\": 0.6\r\n        },\r\n
+    \       {\r\n            \"belts\": [\r\n                2\r\n            ],\r\n
+    \           \"time\": 0.29\r\n        }\r\n        ,\r\n        {\r\n            \"belts\":
+    [\r\n                1\r\n            ],\r\n            \"time\": 0.29\r\n        },\r\n
+    \       {\r\n            \"belts\": [\r\n                3\r\n            ],\r\n
+    \           \"time\": 0.29\r\n        },\r\n        {\r\n            \"belts\":
+    [\r\n                3\r\n            ],\r\n            \"time\": 0.2\r\n        },\r\n
+    \       {\r\n            \"belts\": [\r\n                3\r\n            ],\r\n
+    \           \"time\": 0.2\r\n        },\r\n        {\r\n            \"belts\":
+    [\r\n                0\r\n            ],\r\n            \"time\": 0.2\r\n        },\r\n
+    \       {\r\n            \"belts\": [\r\n                2\r\n            ],\r\n
+    \           \"time\": 0.29\r\n        },\r\n        {\r\n            \"belts\":
+    [\r\n                3\r\n            ],\r\n            \"time\": 0.29\r\n        },\r\n
+    \       {\r\n            \"belts\": [\r\n                1,3\r\n            ],\r\n
+    \           \"time\": 0.65\r\n        },\r\n        {\r\n            \"belts\":
+    [\r\n                4\r\n            ],\r\n            \"time\": 0.9\r\n        }\r\n\r\n\r\n
+    \   ]\r\n}"
+  _dataConfig:
+    cooldownToStart: 1.5
+    notes:
+    - belts: 00000000
+      time: 0.29
+    - belts: 01000000
+      time: 0.29
+    - belts: 02000000
+      time: 0.29
+    - belts: 03000000
+      time: 0.29
+    - belts: 02000000
+      time: 0.29
+    - belts: 03000000
+      time: 0.29
+    - belts: 02000000
+      time: 0.29
+    - belts: 03000000
+      time: 0.2
+    - belts: 02000000
+      time: 0.29
+    - belts: 00000000
+      time: 0.48
+    - belts: 00000000
+      time: 0.45
+    - belts: 03000000
+      time: 0.5
+    - belts: 02000000
+      time: 0.29
+    - belts: 01000000
+      time: 0.29
+    - belts: 00000000
+      time: 0.2
+    - belts: 00000000
+      time: 0.29
+    - belts: 01000000
+      time: 0.29
+    - belts: 02000000
+      time: 0.29
+    - belts: 03000000
+      time: 0.29
+    - belts: 010000000200000003000000
+      time: 0.25
+    - belts: 02000000
+      time: 0.5
+    - belts: 00000000
+      time: 0.23
+    - belts: 00000000
+      time: 1
+    - belts: 01000000
+      time: 0.29
+    - belts: 02000000
+      time: 0.29
+    - belts: 03000000
+      time: 0.29
+    - belts: 02000000
+      time: 0.29
+    - belts: 03000000
+      time: 0.29
+    - belts: 02000000
+      time: 0.29
+    - belts: 03000000
+      time: 0.2
+    - belts: 02000000
+      time: 0.29
+    - belts: 00000000
+      time: 0.6
+    - belts: 00000000
+      time: 0.6
+    - belts: 03000000
+      time: 0.6
+    - belts: 02000000
+      time: 0.29
+    - belts: 01000000
+      time: 0.29
+    - belts: 03000000
+      time: 0.29
+    - belts: 03000000
+      time: 0.2
+    - belts: 03000000
+      time: 0.2
+    - belts: 00000000
+      time: 0.2
+    - belts: 02000000
+      time: 0.29
+    - belts: 03000000
+      time: 0.29
+    - belts: 0100000003000000
+      time: 0.65
+    - belts: 04000000
+      time: 0.9

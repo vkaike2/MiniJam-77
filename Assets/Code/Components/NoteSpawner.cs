@@ -1,5 +1,7 @@
 ﻿using Assets.Code.Models;
 using Assets.Code.ScriptableObjects;
+using Assets.Code.Singletons;
+using System;
 using System.Collections;
 using System.Linq;
 using UnityEngine;
@@ -16,7 +18,8 @@ namespace Assets.Code.Components
         [Header("Configuration")]
         [SerializeField]
         private float _velocity;
-       
+        
+
 
         [Header("Prefab")]
         [SerializeField]
@@ -38,7 +41,7 @@ namespace Assets.Code.Components
         [SerializeField]
         private AudioSource _backgroundAudio;
 
-       
+
 
         DataConfig _dataConfig;
 
@@ -47,7 +50,7 @@ namespace Assets.Code.Components
         private Color _thirdColor;
         private Color _fourthColor;
 
-        
+
         public void SetSetupConfig(DataConfig dataConfig)
         {
             _dataConfig = dataConfig;
@@ -68,29 +71,40 @@ namespace Assets.Code.Components
             _thirdColor = _third.gameObject.GetComponent<SpriteRenderer>().color;
             _fourthColor = _fourth.gameObject.GetComponent<SpriteRenderer>().color;
 
-            if(_music != null)
+            if (_music != null)
             {
                 _dataConfig = _music.DataConfig;
                 _riffAudio.clip = _music.RiffClip;
                 _backgroundAudio.clip = _music.BackgroundClip;
             }
-
         }
 
 
         private void Start()
         {
-            StartRiff();
+            EventSingleton.Events.OnStartGame.AddListener(StartRiff);
+            EventSingleton.Events.OnLose.AddListener(OnLose);
+            EventSingleton.Events.OnWin.AddListener(OnWin);
+        }
+
+        private void OnWin() => StopAllCoroutines();
+
+        private void OnLose()
+        {
+            StopAllCoroutines();
         }
 
         IEnumerator ReleaseTheNotes()
         {
             GameObject currentNoteGameObject = null;
             Note currentNote = null;
+            float timeDifference = 0;
+            DateTime initialTime;
             foreach (var note in _dataConfig.notes)
             {
                 yield return new WaitForSecondsRealtime(note.time);
 
+                initialTime = DateTime.Now;
                 foreach (var belt in note.belts)
                 {
 
@@ -120,11 +134,18 @@ namespace Assets.Code.Components
                                            _fourth,
                                            _fourthColor);
                             break;
+                        case Belt.wait:
+                            break;
                         default:
                             break;
                     }
                 }
+
+                timeDifference = (float)DateTime.Now.Subtract(initialTime).TotalMilliseconds;
+                //Debug.Log(timeDifference);
             }
+
+            StartCoroutine(ReleaseTheNotes());
         }
 
         IEnumerator ReleaseTheSong()
@@ -132,6 +153,8 @@ namespace Assets.Code.Components
             yield return new WaitForSecondsRealtime(_dataConfig.cooldownToStart);
             _riffAudio.Play();
             _backgroundAudio.Play();
+
+            //_riffAudio.
         }
 
         public void InstantiateNote(GameObject gameObject, Note note, Transform spawnLocation, Color noteColor)
