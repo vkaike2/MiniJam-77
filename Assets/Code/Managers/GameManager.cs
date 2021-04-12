@@ -28,7 +28,7 @@ namespace Assets.Code.Managers
 
         [Header("UI")]
         [SerializeField]
-        private Slider _sliderVolume;
+        private GameObject _canvas;
 
         [Header("Configuration")]
         [SerializeField]
@@ -48,6 +48,7 @@ namespace Assets.Code.Managers
         public float MaxScore => _maxScore;
         public float ScorePerNote => _scorePerNote;
         public float CurrentScore { get; set; }
+        public GameStage GameStage => _gameStage;
 
         private Combat _heroCombat;
         private GameStage _gameStage;
@@ -71,18 +72,6 @@ namespace Assets.Code.Managers
         }
         private AudioSource[] _allAudioSources;
 
-
-        public void OnChangeVolume()
-        {
-            foreach (var audioSource in _allAudioSources)
-            {
-                audioSource.volume = _sliderVolume.value;
-            }
-
-            //_riffAudio.volume = _sliderVolume.value;
-            //_backgroundAudio.volume = _sliderVolume.value;
-        }
-
         public void StartGame()
         {
             EventSingleton.Events.OnStartGame.Invoke();
@@ -91,12 +80,12 @@ namespace Assets.Code.Managers
         private void Awake()
         {
             _gameStage = GameStage.NOT_STARTED;
+            _canvas.SetActive(true);
         }
 
         private void Start()
         {
             _allAudioSources = GameObject.FindObjectsOfType<AudioSource>();
-
             _heroCombat = GameObject.FindGameObjectWithTag("HERO").GetComponent<Combat>();
             EventSingleton.Events.OnLose.AddListener(OnLose);
             EventSingleton.Events.OnWin.AddListener(OnWin);

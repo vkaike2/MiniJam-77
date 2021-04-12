@@ -1,4 +1,5 @@
-﻿using Assets.Code.Managers;
+﻿using Assets.Code.Enums;
+using Assets.Code.Managers;
 using Assets.Code.Singletons;
 using System;
 using System.Collections;
@@ -13,7 +14,7 @@ namespace Assets.Code.Components
     public class NoteTrigger : MonoBehaviour
     {
         [SerializeField]
-        private KeyCode _inputs;
+        private Position _inputPosition;
         [SerializeField]
         private Color _color;
 
@@ -42,7 +43,8 @@ namespace Assets.Code.Components
         private Note _currentNote;
         private SpriteRenderer _spriteRenderer;
         private float _initialVolume;
-        private GameManager _gameManager;        
+        private GameManager _gameManager;
+        private KeyCode _currentInput;
 
         private void Awake()
         {
@@ -51,27 +53,38 @@ namespace Assets.Code.Components
             _spriteRenderer = this.GetComponent<SpriteRenderer>();
             _color.a = INITIAL_ALPHA_COLOR;
             _spriteRenderer.color = _color;
+        }
 
-            _label_Input.SetText(_inputs.ToString());
+        private void Start()
+        {
+            SetInputValues();
+
+            EventSingleton.Events.OnUpdateInput.AddListener(SetInputValues);
+        }
+
+        private void SetInputValues()
+        {
+            _label_Input.SetText(OptionSingleton.GetNoteInput(_inputPosition).ToString());
+            _currentInput = OptionSingleton.GetNoteInput(_inputPosition);
         }
 
         private void Update()
         {
-            if (Input.GetKeyDown(_inputs))
+            if (Input.GetKeyDown(_currentInput))
             {
                 StartCoroutine(ActivateNote());
 
                 if (_currentNote is null)
                 {
                     _invokeOnError.Invoke();
-                    _gameManager.InvokeUptadeScore(false);
+                    _gameManager?.InvokeUptadeScore(false);
                     return;
                 }
 
 
                 _currentNote.correct = true;
                 _riffAudioSource.volume = _initialVolume;
-                _gameManager.InvokeUptadeScore(true);
+                _gameManager?.InvokeUptadeScore(true);
                 _currentNote.Kill();
             }
         }
@@ -81,11 +94,9 @@ namespace Assets.Code.Components
             Note note = collision.gameObject.GetComponent<Note>();
             if (note != null)
             {
-
                 _currentNote = note;
             }
         }
-
 
         private void OnTriggerExit2D(Collider2D collision)
         {
@@ -97,8 +108,6 @@ namespace Assets.Code.Components
                     _riffAudioSource.volume = 0;
                     _gameManager.InvokeUptadeScore(false);
                 }
-
-                //note.Miss();
                 note.Kill();
 
                 _currentNote = null;

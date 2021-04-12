@@ -48,10 +48,10 @@ namespace Assets.Code.Components
                 {
                     currentMessage += character;
                     _text.SetText(currentMessage);
-                    yield return new WaitForSecondsRealtime(_cdwBetweenCharacters);
+                    yield return new WaitForSeconds(_cdwBetweenCharacters);
                 }
 
-                yield return new WaitForSecondsRealtime(_cdwBetweenMsg);
+                yield return new WaitForSeconds(_cdwBetweenMsg);
                 currentMessage = "";
                 _text.SetText(currentMessage);
 

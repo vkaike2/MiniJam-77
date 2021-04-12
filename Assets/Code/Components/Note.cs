@@ -1,4 +1,5 @@
 ﻿
+using Assets.Code.Singletons;
 using System;
 using UnityEngine;
 
@@ -8,11 +9,12 @@ namespace Assets.Code.Components
     public class Note : MonoBehaviour
     {
 
-        public float velocity;
+        public float initialVelocity;
         public bool correct;
 
         private Rigidbody2D _rigidBody2D;
         private SpriteRenderer _spriteRenderer;
+        private float _currentVelocity;
 
         public void SetColor(Color color)
         {
@@ -35,11 +37,19 @@ namespace Assets.Code.Components
         {
             _rigidBody2D = this.GetComponent<Rigidbody2D>();
             _spriteRenderer = this.GetComponent<SpriteRenderer>();
+            _currentVelocity = 0;
+        }
+        private void Start()
+        {
+            EventSingleton.Events.OnStartGame.AddListener(() =>
+            {
+                _currentVelocity = initialVelocity;
+            });
         }
 
         private void Update()
         {
-            _rigidBody2D.velocity = new Vector2(0, -velocity);    
+            _rigidBody2D.velocity = new Vector2(0, -_currentVelocity);
         }
 
     }

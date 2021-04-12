@@ -11,16 +11,11 @@ namespace Assets.Code.Components
 {
     public class NoteSpawner : MonoBehaviour
     {
-        [Header("Scriptable Object")]
-        [SerializeField]
-        private Music _music;
 
         [Header("Configuration")]
         [SerializeField]
         private float _velocity;
         
-
-
         [Header("Prefab")]
         [SerializeField]
         private GameObject _notePrefab;
@@ -42,13 +37,14 @@ namespace Assets.Code.Components
         private AudioSource _backgroundAudio;
 
 
-
         DataConfig _dataConfig;
 
         private Color _firstColor;
         private Color _secondColor;
         private Color _thirdColor;
         private Color _fourthColor;
+
+        private Guitar _guitar;
 
 
         public void SetSetupConfig(DataConfig dataConfig)
@@ -60,7 +56,7 @@ namespace Assets.Code.Components
         {
             if (_riffAudio.isPlaying) return;
 
-            StartCoroutine(ReleaseTheNotes());
+            //StartCoroutine(ReleaseTheNotes());
             StartCoroutine(ReleaseTheSong());
         }
 
@@ -71,11 +67,13 @@ namespace Assets.Code.Components
             _thirdColor = _third.gameObject.GetComponent<SpriteRenderer>().color;
             _fourthColor = _fourth.gameObject.GetComponent<SpriteRenderer>().color;
 
-            if (_music != null)
+            _guitar = GetComponentInParent<Guitar>();
+
+            if (_guitar.Music != null)
             {
-                _dataConfig = _music.DataConfig;
-                _riffAudio.clip = _music.RiffClip;
-                _backgroundAudio.clip = _music.BackgroundClip;
+                _dataConfig = _guitar.Music.DataConfig;
+                _riffAudio.clip = _guitar.Music.RiffClip;
+                _backgroundAudio.clip = _guitar.Music.BackgroundClip;
             }
         }
 
@@ -83,16 +81,14 @@ namespace Assets.Code.Components
         private void Start()
         {
             EventSingleton.Events.OnStartGame.AddListener(StartRiff);
+
             EventSingleton.Events.OnLose.AddListener(OnLose);
             EventSingleton.Events.OnWin.AddListener(OnWin);
         }
 
         private void OnWin() => StopAllCoroutines();
 
-        private void OnLose()
-        {
-            StopAllCoroutines();
-        }
+        private void OnLose() => StopAllCoroutines();
 
         IEnumerator ReleaseTheNotes()
         {
@@ -161,7 +157,7 @@ namespace Assets.Code.Components
         {
             gameObject = Instantiate(_notePrefab, spawnLocation);
             note = gameObject.GetComponent<Note>();
-            note.velocity = _velocity;
+            note.initialVelocity = _velocity;
             note.SetColor(noteColor);
         }
 

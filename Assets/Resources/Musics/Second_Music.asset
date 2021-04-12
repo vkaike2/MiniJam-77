@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _backgroundClip: {fileID: 8300000, guid: 1904489931525cd498e0b8684cdb126c, type: 3}
   _riffClip: {fileID: 8300000, guid: ac4deaa3a4e14b44cb3348a21662cefb, type: 3}
-  _jsonString: "{\r\n    \"cooldownToStart\": 1.24,\r\n    \"notes\": \r\n    [\r\n
-    \     \r\n{\"belts\": [0], \"time\": 0.23},\r\n{\"belts\": [1], \"time\": 0.23},\r\n{\"belts\":
-    [1], \"time\": 0.23},\r\n{\"belts\": [0], \"time\": 0.23},\r\n{\"belts\": [1],
-    \"time\": 0.23},\r\n{\"belts\": [1], \"time\": 0.23},\r\n{\"belts\": [2], \"time\":
-    0.23},\r\n{\"belts\": [0], \"time\": 0.23},\r\n{\"belts\": [0], \"time\": 0.23},\r\n{\"belts\":
-    [1], \"time\": 0.23},\r\n{\"belts\": [1], \"time\": 0.23},\r\n{\"belts\": [0],
-    \"time\": 0.23},\r\n{\"belts\": [1], \"time\": 0.23},\r\n{\"belts\": [1], \"time\":
-    0.23},\r\n{\"belts\": [3], \"time\": 0.23},\r\n{\"belts\": [0], \"time\": 0.23},\r\n\r\n\r\n{\"belts\":
+  _jsonString: "{\r\n    \"cooldownToStart\": 1,\r\n    \"notes\": \r\n    [\r\n      \r\n{\"belts\":
+    [0], \"time\": 0.23},\r\n{\"belts\": [1], \"time\": 0.23},\r\n{\"belts\": [1],
+    \"time\": 0.23},\r\n{\"belts\": [0], \"time\": 0.23},\r\n{\"belts\": [1], \"time\":
+    0.23},\r\n{\"belts\": [1], \"time\": 0.23},\r\n{\"belts\": [2], \"time\": 0.23},\r\n{\"belts\":
+    [0], \"time\": 0.23},\r\n{\"belts\": [0], \"time\": 0.23},\r\n{\"belts\": [1],
+    \"time\": 0.23},\r\n{\"belts\": [1], \"time\": 0.23},\r\n{\"belts\": [0], \"time\":
+    0.23},\r\n{\"belts\": [1], \"time\": 0.23},\r\n{\"belts\": [1], \"time\": 0.23},\r\n{\"belts\":
+    [3], \"time\": 0.23},\r\n{\"belts\": [0], \"time\": 0.23},\r\n\r\n\r\n{\"belts\":
     [0], \"time\": 0.23},\r\n{\"belts\": [1], \"time\": 0.23},\r\n{\"belts\": [1],
     \"time\": 0.23},\r\n{\"belts\": [0], \"time\": 0.23},\r\n{\"belts\": [1], \"time\":
     0.23},\r\n{\"belts\": [1], \"time\": 0.23},\r\n{\"belts\": [2], \"time\": 0.23},\r\n{\"belts\":
@@ -164,7 +164,7 @@ MonoBehaviour:
     [2], \"time\": 0.125},\r\n{\"belts\": [3], \"time\": 0.125},    \r\n\r\n\r\n\r\n\r\n{\"belts\":
     [0], \"time\": 4.2}   \r\n ]\r\n}"
   _dataConfig:
-    cooldownToStart: 1.24
+    cooldownToStart: 1
     notes:
     - belts: 00000000
       time: 0.23

@@ -25,7 +25,7 @@ namespace Assets.Code.ScriptableObjects
         [Header("CONFIGURATION")]
         [SerializeField]
         private DataConfig _dataConfig;
-
+        
 
         public AudioClip BackgroundClip => _backgroundClip;
         public AudioClip RiffClip => _riffClip;

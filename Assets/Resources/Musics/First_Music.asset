@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _backgroundClip: {fileID: 8300000, guid: 6f9c95aee72057e4686e1f393200012c, type: 3}
   _riffClip: {fileID: 8300000, guid: c42abdf71b3d38b43b7cf6108d53eaa2, type: 3}
-  _jsonString: "{\r\n    \"cooldownToStart\": 1.5,\r\n    \"notes\": [\r\n        {\r\n
+  _jsonString: "{\r\n    \"cooldownToStart\": 1,\r\n    \"notes\": [\r\n        {\r\n
     \           \"belts\": [\r\n                0\r\n            ],\r\n            \"time\":
     0.29\r\n        },\r\n        {\r\n            \"belts\": [\r\n                1\r\n
     \           ],\r\n            \"time\": 0.29\r\n        },\r\n        {\r\n            \"belts\":
@@ -83,7 +83,7 @@ MonoBehaviour:
     [\r\n                4\r\n            ],\r\n            \"time\": 0.9\r\n        }\r\n\r\n\r\n
     \   ]\r\n}"
   _dataConfig:
-    cooldownToStart: 1.5
+    cooldownToStart: 1
     notes:
     - belts: 00000000
       time: 0.29

@@ -131,7 +131,7 @@ namespace Assets.Code.Components
         {
             while (_target != null && _target.IsAlive)
             {
-                yield return new WaitForSecondsRealtime(_atkSpeed);
+                yield return new WaitForSeconds(_atkSpeed);
                 if (_combatAnimator != null)
                     _combatAnimator.SetTrigger(_hashAnimatorAtk);
                 StartCoroutine(WaitSomeTimeThenAtk());
@@ -146,7 +146,7 @@ namespace Assets.Code.Components
 
         IEnumerator WaitSomeTimeThenAtk()
         {
-            yield return new WaitForSecondsRealtime(_waitBeforeAtk);
+            yield return new WaitForSeconds(_waitBeforeAtk);
       
             MakeSomeNoise();
             _target.ReceiveDamage(_currentDamage);
@@ -156,7 +156,7 @@ namespace Assets.Code.Components
         {
             while (_target == null)
             {
-                yield return new WaitForSecondsRealtime(1);
+                yield return new WaitForSeconds(1);
                 switch (_type)
                 {
                     case CombatType.HERO:

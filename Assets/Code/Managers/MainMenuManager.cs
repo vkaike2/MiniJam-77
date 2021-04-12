@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Assets.Code.Enums;
+using Assets.Code.Singletons;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,10 +33,12 @@ namespace Assets.Code.Managers
         {
             if (!_canStart) return;
 
+
             if (Input.GetKeyDown(KeyCode.Return))
             {
                 SceneManager.LoadScene(_nextSceneName);
             }
         }
+
     }
 }

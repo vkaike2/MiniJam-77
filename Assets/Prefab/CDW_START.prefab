@@ -50,7 +50,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: b3359f348e72cdd4ead405b7624b525e, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
@@ -69,8 +69,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81589a0be8f54f34bbffd10b73d82673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cdwToStart: 3
+  _cdwToStart: 4
   _labelCdw: {fileID: 3674357290137700997}
+  _adioSourceStart: {fileID: 0}
+  _adioSourceCdw: {fileID: 0}
   _onFinishCdw:
     m_PersistentCalls:
       m_Calls:
@@ -107,7 +109,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  _adioSource: {fileID: 0}
 --- !u!1 &3674357290137700999
 GameObject:
   m_ObjectHideFlags: 0
